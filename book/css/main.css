@@ -1,0 +1,580 @@
+body {
+    margin: 0;
+    /* padding: 0; */
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.layout-positioner {
+    width: 80%;
+    margin: 0 auto;
+    /* COMMENT THIS */
+    border: 1px solid black;
+}
+
+header {
+    min-height: 28px;
+    background: #ccc;
+}
+
+header ul li {
+    list-style-type: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 27px;
+}
+
+header li:last-child {
+    margin-right: 14px
+}
+
+header ul li a {
+    color: white;
+}
+
+.top-menu .layout-positioner {
+    font-size: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 0 8px 0;
+    border: none;
+}
+
+header .top-menu {
+    background: #424242;
+}
+
+.main-header .layout-positioner {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 20px 0;
+    flex-wrap: wrap;
+    /* COMMENT THIS */
+    border: none;
+    font-size: 21px;
+}
+
+.main-header .layout-positioner div:not(.logo) {
+    /* background: #333; */
+    color: #6d6d6d;
+    /* border-right: 1px solid black; */
+}
+
+.main-header {
+    background: #f4f4f4;
+}
+
+.logo {
+    position: relative;
+}
+
+.logo::after {
+    content: 'online';
+    text-transform: uppercase;
+    position: absolute;
+    top: 10px;
+    /* right: 0; */
+    transform: translate(-25px, 15px) rotate(-90deg);
+}
+
+.search {
+    width: 458px;
+}
+
+.product {
+    width: 302px;
+}
+
+.search input {
+    width: 326px;
+    height: 32px;
+    border: 4px solid #79b260;
+}
+
+.search button {
+    width: 120px;
+    height: 32px;
+    border: 0;
+    background: #79b260;
+    color: white;
+    font-size: 23px;
+    position: relative;
+    text-align: right;
+}
+
+.search button::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 10px;
+    width: 35px;
+    height: 35px;
+    background: url('../images/magnifier.png') no-repeat;
+    background-size: 25px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product {
+    display: flex;
+}
+
+.product .items {
+    width: 70%;
+    border-right: 1px solid #c5c5c5;
+}
+
+.product .wish-list {
+    width: 30%;
+    /* background: #f00; */
+}
+
+.wish-list:hover {
+    cursor: pointer;
+}
+
+/* ------ */
+
+.items {
+    display: flex;
+    flex-direction: column;
+}
+
+.items div:first-child {
+    /* height: 50%; */
+    /* border-bottom: 1px solid black; */
+    color: white;
+}
+
+.cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.layout-for-cart:first-child {
+    margin-left: 15px;
+}
+
+.layout-for-cart:nth-child(2) {
+    font-size: 20px;
+    margin-right: 30px;
+}
+
+.amount {
+    font-size: 13px;
+}
+
+.price {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.calculated-price {
+    font-size: 24px;
+    /* background: red !important; */
+    /* flex-grow: 1; */
+    text-align: center;
+    margin-right: 20px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.checkout button {
+    width: 83px;
+    height: 28px;
+    /* margin-right: 100px; */
+    background: linear-gradient(#414141, #232323);
+    color: white;
+    border-radius: 2px;
+    position: relative;
+    border: 1px solid #232323;
+}
+
+.checkout button:hover {
+    outline: none;
+    background-image: linear-gradient(#232323, #414141);
+    cursor: pointer;
+}
+
+.checkout button::before,
+.checkout button::after {
+    content: '';
+    position: absolute;
+    background: #636363;
+}
+
+.checkout button::before {
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: 0;
+}
+
+.checkout button::after {
+    width: 1px;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.wish-list div {
+    text-align: center;
+}
+
+.wish-list div:first-child {
+    margin-top: 15px;
+}
+
+
+.wish-list {
+    position: relative;
+}
+
+.wish-list::after {
+    content: '20';
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    display: block;
+    width: 25px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    background: #79b260;
+}
+
+main nav {
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
+
+main nav ul {
+    width: 100%;
+    /* background: red; */
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main nav a {
+    /* width: 120px; */
+    display: block;
+    padding: 15px 30px;
+    /* padding: 15px 30px; */
+    text-align: center;
+    color: #5b5b5b;
+    /* width: 25%; */
+}
+
+main nav a:hover {
+    background: linear-gradient(#92d774, #7ab361);
+    color: white;
+}
+
+/* COMMENT THIS */
+
+main .layout-positioner {
+    border: none;
+}
+
+main > .layout-positioner {
+    margin-bottom: 20px;
+}
+
+/* --- */
+
+.layout-positioner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories {
+    width: 190px;
+    height: 1000px;
+    box-sizing: border-box;
+    border: 1px solid #d6d6d6;
+    /* по макету, но выглядит не очень
+    margin-left: 10px;
+    */
+}
+
+.book-section {
+    width: 1050px;
+    min-height: 50px;
+    box-sizing: border-box;
+    border: 1px solid #d6d6d6;
+    padding: 20px 25px 0 25px;
+    position: relative;
+    /* по макету, но выглядит не очень
+    margin-right: 16px;
+    */
+}
+
+.categories h3 {
+    margin: 11px 0 20px 17px;
+    font-size: 24px;
+    color: #6b6969;
+    font-weight: 400;
+}
+
+.categories ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.main-choice li a {
+    display: block;
+    padding: 5px 25px;
+    color: #555454;
+    position: relative;
+    /* border-bottom: 1px solid #e6e7e8; */
+}
+
+.main-choice li a::after {
+    content: '';
+    display: block;
+    width: calc(100% - 25px);
+    height: 1px;
+    background: #e6e7e8;
+    position: absolute;
+    bottom: 0;
+}
+
+.main-choice li a:hover {
+    background: linear-gradient(#92d774, #7ab461);
+    color: white;
+}
+
+.main-choice li:hover a::after {
+    display: none;
+}
+
+.categories div a {
+    color: #696969;
+}
+
+.label-of-category {
+    padding: 10px 0 10px 20px;
+    font-weight: bold;
+}
+
+.categories > ul > li:first-child a {
+    padding-left: 20px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.book {
+    width: 120px;
+    min-height: 250px;
+    /* background: #ccc; */
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+@media screen and (min-width: 1392px) {
+    .book:not(:nth-child(5n)) {
+        margin-right: 70px;
+    }
+}
+
+h2 {
+    margin: 0;
+    margin-bottom: 27px;
+}
+
+.poster img {
+    width: 120px;
+    border: 5px solid white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px 5px #f1f1f1;
+    transition: 0.2s box-shadow;
+}
+
+.book img:hover {
+    box-shadow: 0 0 10px 5px #d6d6d6;
+}
+
+.label-of-book a {
+    width: 85%;
+    display: block;
+    /* text-align: center; */
+    margin: 0 auto;
+    /* margin: 13px 0 8px 0 */
+    padding-top: 13px;
+    color: #646464;
+    /* font-size: 18px; */
+}
+
+.label-of-book a:hover {
+    color: #f00;
+    text-decoration: underline;
+}
+
+.price-of-book {
+    margin-top: 8px;
+    color: #f05356;
+    font-size: 21px;
+}
+
+.book.discount::before {
+    content: '30% Off';
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    /* font-weight: bold; */
+    text-align: center;
+    line-height: 25px;
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.pages ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pages ul li a {
+    display: block;
+    padding: 7px;
+    /* border: 1px solid #e0e0e0; */
+    /* box-sizing: border-box; */
+}
+
+.pages ul li a:hover {
+    /* border: 1px solid #e0e0e0; */
+    box-shadow: inset 0 0 0 1px #e0e0e0;
+}
+
+.pages ul li a:focus {
+   box-shadow: inset 0 -4px 0 0 #81bd66;
+}
+
+.book-selection {
+    /* min-height: 350px; */
+    padding-bottom: 35px;
+    background: url('../images/gray-background.jpg');
+}
+
+.book-selection .layout-positioner {
+    height: 100%;
+    padding: 24px 25px 12px 25px;
+    
+    /* background: #000;  */
+}
+
+.one-category h3, .one-category a {
+    color: #ddd;
+}
+
+.one-category h3 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    /* margin-right: 5px; */
+    /* margin-left: 5px; */
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.one-category ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 5px;
+    list-style-type: none;
+}
+
+.one-category li:not(:last-child)::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #575250;
+    display: block;
+    margin-top: 7px;
+    /* opacity: 0.5; */
+}
+
+.one-category:not(:last-child) {
+    margin-right: 30px;
+}
+
+.cards, footer {
+    /* padding: 20px 0; */
+    /* height: 96px; */
+    background: url('../images/payment-background.jpg');
+}
+
+.cards {
+    margin-top: -16px;
+    /* margin-bottom: -16px; */
+    border-bottom: 1px solid #4f5351;
+}
+
+.cards .layout-positioner {
+    display: block;
+    color: #ddd;
+    padding: 5px 0;
+    border: none;
+}
+
+.cards p {
+    /* margin: 0; */
+    text-align: center;
+}
+
+.cards p img {
+    width: 60px;
+    /* height: 40px; */
+}
+
+footer {
+    min-height: 60px;
+}
+
+footer p {
+    margin: 0;
+    color: #dddddd;
+    text-align: center;
+    /* font-size: 16px; */
+    line-height: 60px;
+}
+
+/* 
+The Hare With Amber Eyes
+The War of Art
+The Immortals of Meluha
+Life Is What You Make It
+*/
