@@ -1,0 +1,38 @@
+import random
+def find_ways(n):
+    # сетка n x n
+    grid = []
+    for i in range(0, n + 1):
+        grid.append([])
+        for j in range(0, n + 1):
+            grid[len(grid) - 1].append(0)
+
+    row = 0
+    column = 0
+    attempts = 0
+    while grid[n][n] == 0:
+        go = random.randint(0, 1)
+        # 0 - right, 1 - down
+        if go == 0:
+            try:
+                row += 1
+                grid[column][row] = "*"
+                attempts += 1
+            except IndexError:
+                row -= 1
+                attempts -= 1
+        else:
+            try:
+                column += 1
+                grid[column][row] = "*"
+                attempts += 1
+            except IndexError:
+                column -= 1
+                attempts -= 1
+
+
+
+    print(grid)
+
+
+find_ways(2)
